@@ -45,7 +45,7 @@ function slideShow() {
     );
     // iterate
     slider.index++;
-    if (slider.index === slider.array.length) {
+    if (slider.index >= slider.array.length) {
         slider.index = 0;
     }
     // function calls itself to start a loop
