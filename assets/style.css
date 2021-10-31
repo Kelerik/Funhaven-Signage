@@ -72,7 +72,7 @@ p {
 }
 
 /* SLIDESHOW */
-/* https://stackoverflow.com/questions/25347946/add-fade-effect-in-slideshow-javascript */
+/* inspired by https://stackoverflow.com/questions/25347946/add-fade-effect-in-slideshow-javascript */
 img {
     width: 100%;
 }
@@ -82,7 +82,4 @@ img {
 }
 #slide-container.fadeOut {
     opacity: 0;
-}
-.slide-img {
-    display: none;
 }

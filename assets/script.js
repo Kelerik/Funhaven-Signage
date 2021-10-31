@@ -3,12 +3,14 @@ window.onclick = function () {
     window.location = "/";
 };
 
-// SLIDESHOW
-// https://stackoverflow.com/questions/25347946/add-fade-effect-in-slideshow-javascript
+// --- SLIDESHOW START ---
+// inspired by https://stackoverflow.com/questions/25347946/add-fade-effect-in-slideshow-javascript
 // NOTE: fade effect seems choppy when the images aren't fully loaded yet
 
-// get array of all the elements with this class
-var imgArray = document.getElementsByClassName("slide-img");
+// get array of all the <a> elements inside the slideshow element
+var imgArray = document
+    .getElementById("slide-container")
+    .getElementsByTagName("a");
 // other slide variables
 var slideIndex = 0,
     slideDuration = 6000;
@@ -16,11 +18,15 @@ var slideIndex = 0,
 function slideShow() {
     // apply the fadeOut class to make the image fade out using the opacity property
     document.getElementById("slide-container").className += "fadeOut";
-    // every X milliseconds, change the src attribute to the textContent of the HTML element. this assumes the HTML file path text
+    // every X milliseconds, change the "src" attribute of the <img> element to the "href" of the <a> element
     setTimeout(
         function () {
-            document.getElementById("slide-container").src =
-                imgArray[slideIndex].textContent;
+            document
+                // search for the slide element
+                .getElementById("slide-container")
+                // then search for the <img> elements inside it (we are assuming there will only be one, so use the 0th index)
+                // then modify the "src" attribute to the "href" of the array
+                .getElementsByTagName("img")[0].src = imgArray[slideIndex].href;
             // then remove the fade out class
             document.getElementById("slide-container").className = "";
         },
@@ -36,3 +42,4 @@ function slideShow() {
     setTimeout(slideShow, slideDuration);
 }
 slideShow();
+// ------ SLIDESHOW END ------
