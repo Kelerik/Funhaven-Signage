@@ -54,10 +54,10 @@ p {
     margin: 0;
 }
 h2 {
-    font-size: 4.2vh;
+    font-size: 4.4vh;
 }
 ul {
-    font-size: 3.2vh;
+    font-size: 3.5vh;
     list-style-type: none;
     padding: 0 0 0 1vw;
 }
@@ -72,44 +72,17 @@ p {
 }
 
 /* SLIDESHOW */
-/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow_auto */
-.mySlides {
-    display: none;
-}
+/* https://stackoverflow.com/questions/25347946/add-fade-effect-in-slideshow-javascript */
 img {
-    vertical-align: middle;
     width: 100%;
 }
-/* SLIDESHOW - Caption text */
-.text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
+#slide-container {
+    opacity: 1;
+    transition: opacity 1s;
 }
-/* SLIDESHOW - Fading animation */
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
+#slide-container.fadeOut {
+    opacity: 0;
 }
-@-webkit-keyframes fade {
-    from {
-        opacity: 0.4;
-    }
-    to {
-        opacity: 1;
-    }
-}
-@keyframes fade {
-    from {
-        opacity: 0.4;
-    }
-    to {
-        opacity: 1;
-    }
+.slide-img {
+    display: none;
 }
