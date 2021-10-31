@@ -6,6 +6,7 @@
 :root {
     --body-height: 83.3vh;
     --article-spacing: 2.6vw;
+    --border-radius: 1.4vh;
 }
 body {
     background: url("../assets/img/menu_bg.png");
@@ -23,28 +24,35 @@ main {
     height: var(--body-height);
     gap: var(--article-spacing);
 }
-/* dark blue background section */
-article,
-aside {
-    height: var(--body-height);
+.big-column,
+.small-column {
     display: flex;
     flex-direction: column;
+    gap: var(--article-spacing);
+}
+.big-column {
+    flex: 3;
+}
+.small-column {
+    flex: 2;
+}
+/* dark blue background section */
+article {
     background: rgb(17, 18, 52);
     border: 0.4vh solid white;
-    border-radius: 1.4vh;
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
     padding: 1.9vh 1.6vw;
     font-size: 2.8vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex: 1 0;
 }
-/* primary column */
-article {
-    flex: 3;
-}
-/* secondary column */
-aside {
-    flex: 2;
+.slide-article {
+    padding: 0;
+    flex: 0 1;
 }
 /* general stuff */
 h2,
@@ -75,6 +83,8 @@ p {
 /* inspired by https://stackoverflow.com/a/25348073 */
 img {
     width: 100%;
+    display: block;
+    border-radius: var(--border-radius);
 }
 #slide-container {
     opacity: 1;
