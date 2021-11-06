@@ -1,6 +1,7 @@
 // click anywhere on screen to return to home page
 window.onclick = function () {
-    window.location = "/";
+    // move two directories upwards
+    window.location = "../../";
 };
 /* Randomize array in-place using Durstenfeld shuffle algorithm */
 // https://stackoverflow.com/a/12646864
