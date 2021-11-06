@@ -11,7 +11,7 @@
     --bg-color: rgb(17, 18, 52);
 }
 body {
-    background: url("../assets/img/menu_bg.jpg");
+    background: url("../assets/img/menu-bg.jpg");
     background-size: cover;
 }
 header {
