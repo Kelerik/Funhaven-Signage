@@ -9,6 +9,8 @@
     --border-radius: 1.4vh;
     --border-style: 0.5vh solid white;
     --bg-color: rgb(17, 18, 52);
+    --yellow-gradient: linear-gradient(140deg, #efff00, #ffd400);
+    --table-border: 0.6vh solid yellow;
 }
 body {
     background: url("../assets/img/menu-bg.jpg");
@@ -126,4 +128,23 @@ figcaption {
 }
 #slide-container.fadeOut {
     opacity: 0;
+}
+
+/* TABLE */
+table {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    font-size: 10vh;
+    background: var(--bg-color);
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+th {
+    border: var(--table-border);
+    background: var(--yellow-gradient);
+    color: var(--bg-color);
+}
+td {
+    border: var(--table-border);
 }
