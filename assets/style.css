@@ -7,6 +7,8 @@
     --body-height: 83.3vh;
     --article-spacing: 2.6vw;
     --border-radius: 1.4vh;
+    --border-style: 0.5vh solid white;
+    --bg-color: rgb(17, 18, 52);
 }
 body {
     background: url("../assets/img/menu_bg.jpg");
@@ -38,15 +40,13 @@ main {
 }
 /* dark blue background section */
 article {
-    background: rgb(17, 18, 52);
-    border: 0.4vh solid white;
+    background: var(--bg-color);
+    border: var(--border-style);
     border-radius: var(--border-radius);
     display: flex;
     flex-direction: column;
     padding: 1.9vh 1.6vw;
     font-size: 2.8vh;
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
     flex: 1 0;
 }
@@ -75,13 +75,47 @@ p {
 .price {
     float: right;
 }
-.price::before {
+.price::before,
+.gallery-price::before {
     content: "$";
+}
+
+/* GALLERY */
+.gallery {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+figure {
+    display: flex;
+    flex-basis: 25%;
+    margin: 0;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+}
+figure img {
+    width: 70%;
+    border-radius: 50%;
+    border: var(--border-style);
+}
+figcaption {
+    font-size: 4.4vh;
+}
+.gallery-price {
+    float: right;
+    position: absolute;
+    bottom: 9.1vh;
+    right: 2vw;
+    background: var(--bg-color);
+    border: var(--border-style);
+    border-radius: var(--border-radius);
+    padding: 0 0.5vw;
 }
 
 /* SLIDESHOW */
 /* inspired by https://stackoverflow.com/a/25348073 */
-img {
+.slide-article img {
     width: 100%;
     display: block;
     border-radius: var(--border-radius);
