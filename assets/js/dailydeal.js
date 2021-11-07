@@ -13,8 +13,13 @@ var weekdays = [
     "saturday",
 ];
 
-// display one day and hide the others. if the day doesn't exist, all are hidden
+// display one day and hide the others
 function displayDay(dayNumber) {
+    // if no argument passed, get day automatically
+    if (!dayNumber) {
+        dayNumber = new Date().getDay();
+    }
+    // iterate through array. if the day doesn't exist, all are hidden
     for (let i = 0; i < dayElements.length; i++) {
         if (dayElements[i].className === weekdays[dayNumber]) {
             dayElements[i].style.display = "block";
@@ -24,13 +29,25 @@ function displayDay(dayNumber) {
     }
 }
 
-// get the weekday then display the corresponding day
-function refreshDay() {
-    var d = new Date().getDay();
-    displayDay(d);
-}
+// ------ START ------
+displayDay();
+setInterval(displayDay, 3 * 3600000);
 
-refreshDay();
-
-// check every once in a while to see if the date changed, then update the display
-setInterval(refreshDay, 3 * 3600000);
+// --- FOR TESTING ONLY ---
+// - SUNDAY
+// displayDay(0)
+// - MONDAY
+// displayDay(1)
+// - TUESDAY
+// displayDay(2)
+// - WEDNESDAY
+displayDay(3);
+// - THURSDAY
+// displayDay(4);
+// - FRIDAY
+// displayDay(5);
+// - SATURDAY
+// displayDay(6);
+window.onkeypress = function (event) {
+    displayDay(event.keyCode - 49);
+};

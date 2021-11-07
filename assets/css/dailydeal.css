@@ -12,17 +12,24 @@ body {
 body,
 h1,
 h2,
+h3,
 p {
     margin: 0;
 }
 h1 {
     font-size: 16vh;
 }
+h2,
+h3 {
+    line-height: 1;
+}
 p {
     font-size: 5.5vh;
 }
 section {
     height: 100vh;
+    /* default for most days */
+    color: #fff;
 }
 article {
     border: 1vh solid;
@@ -32,17 +39,31 @@ article {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    /* default for most days */
+    border-color: #fff;
 }
 /* weekday styling */
+.wednesday {
+    background-color: #000025;
+}
+.wednesday h2 {
+    font-size: 14vh;
+}
+.wednesday h3 {
+    font-size: 14vh;
+    font-weight: 300;
+}
+.thursday {
+    background-color: #002500;
+}
+.thursday h2 {
+    font-size: 24vh;
+}
 .friday {
-    color: #fff;
     background-color: #000025;
 }
 .friday h2 {
-    font-size: 13vh;
-}
-.friday article {
-    border-color: #fff;
+    font-size: 18vh;
 }
 .saturday {
     color: #000;
