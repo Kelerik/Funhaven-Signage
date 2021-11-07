@@ -13,7 +13,7 @@
     --table-border: 0.6vh solid yellow;
 }
 body {
-    background: url("../assets/img/menu-bg.jpg");
+    background: url("../../assets/img/menu-bg.jpg");
     background-size: cover;
 }
 header {
