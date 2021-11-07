@@ -4,14 +4,19 @@
     text-align: center;
     font-weight: bold;
 }
-h1 {
-    font-size: 16vh;
+/* default background color when no day is shown */
+body {
+    background-color: #000;
 }
+/* basic styling */
 body,
 h1,
 h2,
 p {
     margin: 0;
+}
+h1 {
+    font-size: 16vh;
 }
 p {
     font-size: 5.5vh;
@@ -28,6 +33,7 @@ article {
     flex-direction: column;
     justify-content: space-between;
 }
+/* weekday styling */
 .friday {
     color: #fff;
     background-color: #000025;
