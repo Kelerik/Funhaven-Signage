@@ -5,16 +5,29 @@
     font-weight: bold;
 }
 h1 {
-    font-size: 18vh;
+    font-size: 16vh;
+}
+h1,
+h2,
+p {
     margin: 0;
+}
+p {
+    font-size: 5.5vh;
 }
 main {
     border: 1vh solid black;
     margin: 0px 4vh;
     padding: 1vh;
-    height: 74vh;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .saturday {
     color: #000;
     background-color: #fff;
+}
+.saturday h2 {
+    font-size: 13vh;
 }
