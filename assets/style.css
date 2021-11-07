@@ -132,9 +132,11 @@ figcaption {
 
 /* TABLE */
 table {
-    width: 80%;
+    font-weight: bold;
+    width: 100%;
     text-align: center;
     margin: auto;
+    margin-top: 2vh;
     font-size: 10vh;
     background: var(--bg-color);
     border-spacing: 0;
@@ -147,4 +149,13 @@ th {
 }
 td {
     border: var(--table-border);
+}
+.table-text {
+    font-size: 5vh;
+    vertical-align: middle;
+    padding: 0 1vw;
+}
+.table-subtext {
+    display: block;
+    font-size: 4vh;
 }
