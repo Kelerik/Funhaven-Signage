@@ -1,9 +1,36 @@
 * {
     color: white;
-    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-family: "Bahnschrift", Arial, sans-serif;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 body {
     background: url("../../assets/img/menu-bg.jpg");
     background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    gap: 0 4vw;
+    text-shadow: 0 0 1vh #000;
+}
+h1,
+h2 {
+    flex-basis: 100%;
+    font-size: 17vh;
+    color: #ffff4d;
+}
+.img-wrapper {
+    width: 20%;
+}
+img {
+    width: 100%;
+}
+p {
+    font-size: 8vh;
+    font-weight: bold;
 }
