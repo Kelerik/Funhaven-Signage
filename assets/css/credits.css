@@ -1,0 +1,46 @@
+* {
+    color: white;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    box-sizing: border-box;
+}
+:root {
+    --body-height: 83.3vh;
+    --article-spacing: 2.6vw;
+    --border-radius: 1.4vh;
+    --bg-color: rgb(17, 18, 52);
+    --yellow-gradient: linear-gradient(140deg, #efff00, #ffd400);
+    --table-border: 0.6vh solid yellow;
+}
+body {
+    background: url("../../assets/img/menu-bg.jpg");
+    background-size: cover;
+    padding: 0 var(--article-spacing);
+    display: flex;
+}
+table {
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    margin-top: 2vh;
+    font-size: 10vh;
+    background: var(--bg-color);
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+th {
+    border: var(--table-border);
+    background: var(--yellow-gradient);
+    color: var(--bg-color);
+}
+td {
+    border: var(--table-border);
+}
+.table-text {
+    font-size: 5vh;
+    vertical-align: middle;
+    padding: 0 1vw;
+}
+.table-subtext {
+    display: block;
+    font-size: 4vh;
+}

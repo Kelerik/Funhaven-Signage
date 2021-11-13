@@ -1,0 +1,9 @@
+* {
+    color: white;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    box-sizing: border-box;
+}
+body {
+    background: url("../../assets/img/menu-bg.jpg");
+    background-size: cover;
+}
