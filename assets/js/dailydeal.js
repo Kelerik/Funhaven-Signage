@@ -16,10 +16,10 @@ var weekdays = [
 // display one day and hide the others
 function displayDay(dayNumber) {
     // if no argument passed, get day automatically
-    if (!dayNumber) {
+    if (dayNumber === undefined) {
         dayNumber = new Date().getDay();
     }
-    // iterate through array. if the day doesn't exist, all are hidden
+    // iterate through array. show relevant day and hide the others. if the requested day doesn't exist, all are hidden
     for (let i = 0; i < dayElements.length; i++) {
         if (dayElements[i].className === weekdays[dayNumber]) {
             dayElements[i].style.display = "block";
@@ -35,19 +35,20 @@ setInterval(displayDay, 3 * 3600000);
 
 // --- FOR TESTING ONLY ---
 // - SUNDAY
-// displayDay(0)
+// displayDay(0);
 // - MONDAY
 // displayDay(1)
 // - TUESDAY
-// displayDay(2)
+// displayDay(2);
 // - WEDNESDAY
-displayDay(3);
+// displayDay(3);
 // - THURSDAY
 // displayDay(4);
 // - FRIDAY
 // displayDay(5);
 // - SATURDAY
 // displayDay(6);
+// press a number from 1-7 to select day
 window.onkeypress = function (event) {
     displayDay(event.keyCode - 49);
 };

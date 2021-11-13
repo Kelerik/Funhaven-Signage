@@ -43,11 +43,17 @@ article {
     border-color: #fff;
 }
 /* weekday styling */
+.tuesday {
+    background-color: #000;
+}
+.tuesday h2 {
+    font-size: 26vh;
+}
 .wednesday {
     background-color: #000025;
 }
 .wednesday h2 {
-    font-size: 14vh;
+    font-size: 15vh;
 }
 .wednesday h3 {
     font-size: 14vh;
@@ -59,6 +65,7 @@ article {
 .thursday h2 {
     font-size: 24vh;
 }
+
 .friday {
     background-color: #000025;
 }
@@ -70,7 +77,7 @@ article {
     background-color: #fff;
 }
 .saturday h2 {
-    font-size: 13vh;
+    font-size: 18vh;
 }
 .saturday article {
     border-color: #000;
